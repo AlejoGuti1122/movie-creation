@@ -1,0 +1,163 @@
+body {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  background: rgba(26, 26, 26, 0.95);
+  display: flex;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  background-color: #eed698;
+  margin-left: 5px;
+  border-radius: 5px;
+  margin-top: 9px;
+  margin-left: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  margin-left: 240px;
+  font-family: sans-serif;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e50914;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav a:hover {
+  color: #e50914;
+  transform: translateY(-2px);
+}
+
+.nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #e50914, transparent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav a:hover::before {
+  transform: scaleX(1);
+}
+
+/* Efecto de scroll */
+.header.scrolled {
+  background: rgba(26, 26, 26, 0.98);
+  padding: 0.5rem 0;
+}
+
+/* Indicador de página activa */
+.nav a.active {
+  color: #e50914;
+}
+
+.nav a.active::before {
+  transform: scaleX(1);
+}
+
+/* Heredar estilos base del header y nav */
+/* ...existing code... */
+
+.rankings-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.category {
+  background: linear-gradient(145deg, #1f1f1f, #585757);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.category h2 {
+  color: #e50914;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e50914;
+  padding-bottom: 0.5rem;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.movie-item {
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.movie-item:hover {
+  transform: translateY(-5px);
+}
+
+.ranking {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 30px;
+  height: 30px;
+  background: #e50914;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.movie-item h3 {
+  color: white;
+  margin: 0.5rem 0;
+}
+
+.movie-item p {
+  color: #b8b8b8;
+  margin: 0.3rem 0;
+}
