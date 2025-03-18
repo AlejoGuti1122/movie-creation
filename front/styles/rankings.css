@@ -33,6 +33,7 @@ body {
   font-family: sans-serif;
 }
 
+
 .nav a {
   text-decoration: none;
   color: white;
@@ -101,7 +102,7 @@ body {
 .rankings-container {
   max-width: 1000px;
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 1rem;
   color: white;
   font-family: "Poppins", sans-serif;
 }
