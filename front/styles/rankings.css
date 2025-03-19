@@ -1,14 +1,33 @@
 body {
-  background: rgba(26, 26, 26, 0.95);
-  backdrop-filter: blur(10px);
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  position: relative;
+  background-image: url("../assets/cine.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 26, 26, 0.75);
+  backdrop-filter: blur(6px);
+  z-index: -1;
 }
 
 .header {
   width: 100%;
   height: 100px;
-  background: rgba(26, 26, 26, 0.95);
+  background: rgba(19, 18, 18, 0.95);
   display: flex;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
@@ -33,77 +52,53 @@ body {
   font-family: sans-serif;
 }
 
-
 .nav a {
   text-decoration: none;
   color: white;
   font-size: 18px;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.2rem;
+  background-color: transparent;
+  border: 2px solid #99927b;
+  border-radius: 5px;
   position: relative;
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-}
-
-.nav a::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #e50914;
-  transition: width 0.3s ease;
-}
-
-.nav a:hover::after {
-  width: 100%;
-}
-
-.nav a:hover {
-  color: #e50914;
-  transform: translateY(-2px);
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
 }
 
 .nav a::before {
   content: "";
   position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #e50914, transparent);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+
+  background-color: #d4c8aa;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.4s ease, height 0.4s ease;
+  z-index: -1;
 }
 
 .nav a:hover::before {
-  transform: scaleX(1);
+  width: 200%;
+  height: 200%;
 }
 
-/* Efecto de scroll */
-.header.scrolled {
-  background: rgba(26, 26, 26, 0.98);
-  padding: 0.5rem 0;
+.titulo2 {
+  color: #99927b;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
 }
-
-/* Indicador de página activa */
-.nav a.active {
-  color: #e50914;
-}
-
-.nav a.active::before {
-  transform: scaleX(1);
-}
-
-/* Heredar estilos base del header y nav */
-/* ...existing code... */
 
 .rankings-container {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 1rem;
-  color: white;
+  color: #ffffff;
+  font-size: 17px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -115,9 +110,9 @@ body {
 }
 
 .category h2 {
-  color: #e50914;
+  color: #99927b;
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid #e50914;
+  border-bottom: 2px solid #99927b;
   padding-bottom: 0.5rem;
 }
 
@@ -145,7 +140,7 @@ body {
   left: -10px;
   width: 30px;
   height: 30px;
-  background: #e50914;
+  background: #99927b;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -161,4 +156,51 @@ body {
 .movie-item p {
   color: #b8b8b8;
   margin: 0.3rem 0;
+}
+
+.rate {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: 90px;
+  margin-right: 20px;
+}
+
+.search-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #99927b;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: white;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #d4c8aa;
+  background: rgba(255, 255, 255, 0.15);
+  width: 250px;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  color: #99927b;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-left: -35px;
+}
+
+.search-button:hover {
+  color: #d4c8aa;
 }
