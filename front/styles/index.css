@@ -189,3 +189,14 @@ body::before {
 .search-button:hover {
   color: #d4c8aa;
 }
+
+.loading-container {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: #d4c8aa;
+  z-index: 1000;
+}
