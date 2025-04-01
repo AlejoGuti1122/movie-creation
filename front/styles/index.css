@@ -130,7 +130,7 @@ body::before {
 
 .card {
   background: linear-gradient(145deg, #1f1f1f, #2d2d2d);
-  width: 300px;
+  width: 305px;
   padding: 1rem;
   flex-grow: 0;
   border-radius: 15px;
