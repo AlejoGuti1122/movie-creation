@@ -2,6 +2,7 @@ const renderCards = require("./renderCards")
 const { getMovies } = require("./services")
 const cardsContainer = document.querySelector(".cards-container")
 
+
 const loadMovies = async () => {
   try {
     const movies = await getMovies()

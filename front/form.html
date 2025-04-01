@@ -19,15 +19,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <header class="header">
       <a href="./index.html">
         <img
           class="logo"
-          src="./assets/logo2.webp"
-          alt=""
+          src="./assets/logo3.webp"
+          alt="Logo"
         />
       </a>
       <nav class="nav">
@@ -36,9 +35,171 @@
         <a
           class="form"
           href="./form.html"
-          ><i class="fas fa-clipboard-list"></i>Form</a
+          ><i class="fas fa-clipboard-list"></i> Form</a
         >
       </nav>
     </header>
+    <main>
+      <div class="content">
+        <form id="formulario-pelicula">
+          <label for="title">Título:</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            required
+          /><br /><br />
+
+          <label for="year">Año:</label>
+          <input
+            type="number"
+            id="year"
+            name="year"
+            required
+          /><br /><br />
+
+          <label for="director">Director:</label>
+          <input
+            type="text"
+            id="director"
+            name="director"
+            required
+          /><br /><br />
+
+          <label for="hours">Duración:</label>
+          <div style="display: flex; gap: 5px">
+            <input
+              type="number"
+              id="hours"
+              name="hours"
+              min="0"
+              max="23"
+              placeholder="Horas"
+              style="width: 60px"
+              required
+            />
+            <span>:</span>
+            <input
+              type="number"
+              id="minutes"
+              name="minutes"
+              min="0"
+              max="59"
+              placeholder="Minutos"
+              style="width: 60px"
+              required
+            />
+          </div>
+          <br /><br />
+
+          <label>Género:</label>
+          <div>
+            <input
+              type="checkbox"
+              id="action"
+              name="genre"
+              value="Action"
+            />
+            <label for="action">Acción</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="adventure"
+              name="genre"
+              value="Adventure"
+            />
+            <label for="adventure">Aventura</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="comedy"
+              name="genre"
+              value="Comedy"
+            />
+            <label for="comedy">Comedia</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="terror"
+              name="genre"
+              value="Terror"
+            />
+            <label for="terror">Terror</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="suspenso"
+              name="genre"
+              value="Suspenso"
+            />
+            <label for="suspenso">Suspenso</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="romance"
+              name="genre"
+              value="Romance"
+            />
+            <label for="romance">Romance</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="drama"
+              name="genre"
+              value="Drama"
+            />
+            <label for="drama">Drama</label>
+          </div>
+          <br /><br />
+
+          <label
+            class="label"
+            for="rate"
+            >Calificación:</label
+          >
+          <input
+            type="number"
+            id="rate"
+            name="rate"
+            step="0.1"
+            min="0"
+            max="10"
+            required
+          /><br /><br />
+
+          <label for="poster">Poster:</label>
+          <input
+            type="text"
+            id="poster"
+            name="poster"
+            placeholder="Ingrese la URL de la imagen"
+            required
+          /><br /><br />
+
+          <button
+            class="button"
+            type="submit"
+          >
+            Guardar
+          </button>
+          <!-- Si deseas que el reset se maneje con JS, podrías usar type=\"button\" y agregar un event listener en el JS -->
+          <button
+            class="button2"
+            type="reset"
+          >
+            Limpiar
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./dist/formBundle.js"></script>
   </body>
 </html>
