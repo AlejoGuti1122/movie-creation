@@ -10,7 +10,6 @@ const getMovies = async () => {
   }
 }
 
-// Nueva función para crear película
 const createMovie = async (movieData) => {
   try {
     const newMovie = new Movie(movieData)

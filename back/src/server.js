@@ -5,12 +5,10 @@ const indexRouter = require("./routes")
 
 const app = express()
 
-// Middlewares - El orden es importante
-app.use(morgan("dev"))  // Logger de peticiones HTTP
-app.use(cors())        // Habilita CORS
-app.use(express.json()) // Parser para JSON
+app.use(morgan("dev"))
+app.use(cors())
+app.use(express.json())
 
-// Rutas
 app.use("/movies", indexRouter)
 
 module.exports = app

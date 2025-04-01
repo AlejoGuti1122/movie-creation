@@ -9,24 +9,23 @@ const getMoviesController = async (req, res) => {
   }
 }
 
-// Nuevo controlador para crear película
 const createMovieController = async (req, res) => {
   try {
     const { title, year, director, duration, genre, rate, poster } = req.body
-    
+
     const newMovie = await createMovie({
-      title, 
-      year, 
-      director, 
-      duration, 
-      genre, 
-      rate, 
-      poster
+      title,
+      year,
+      director,
+      duration,
+      genre,
+      rate,
+      poster,
     })
-    
-    res.status(201).json({ 
-      message: "Película creada exitosamente", 
-      movie: newMovie 
+
+    res.status(201).json({
+      message: "Película creada exitosamente",
+      movie: newMovie,
     })
   } catch (error) {
     res.status(400).json({ error: error.message })

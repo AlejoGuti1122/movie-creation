@@ -5,7 +5,6 @@ const mongoose = require("mongoose")
 
 const dbCon = async () => {
   try {
-    //Realizar la conexion con la base de datos
     await mongoose.connect(process.env.MONGO_URI)
     console.log("✅ Conectado a la base de datos MongoDB Atlas")
     return true

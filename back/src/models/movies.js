@@ -1,6 +1,5 @@
 const mongoose = require("mongoose")
 
-// Definir el esquema con los tipos adecuados
 const movieSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -28,7 +27,6 @@ const movieSchema = new mongoose.Schema({
   },
 })
 
-// Crear y exportar el modelo - especificamos la colección "movies"
 const Movie = mongoose.model("Movie", movieSchema, "movies")
 
 module.exports = Movie
