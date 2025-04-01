@@ -9,7 +9,6 @@ const getMovies = async () => {
   }
 }
 
-// Agregar esta nueva función para crear películas
 const createMovie = async (movieData) => {
   try {
     const response = await axios.post("http://localhost:3000/movies", movieData)

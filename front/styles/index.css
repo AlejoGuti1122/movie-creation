@@ -209,7 +209,7 @@ body::before {
 }
 
 .loading-container {
-  display: none; /* Oculto por defecto */
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;

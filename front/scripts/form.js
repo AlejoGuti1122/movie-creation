@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showError(input, message) {
-    clearError(input) // Limpia mensaje previo, si existe
+    clearError(input)
     const errorSpan = document.createElement("span")
     errorSpan.classList.add("error-msg")
 
@@ -109,23 +109,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const duration = `${hours}h ${minutes}m`
     const movieData = {
-      // Cambiado de movie a movieData
       title,
-      year: parseInt(year), // Convertir a número
+      year: parseInt(year),
       director,
       duration,
-      genre, // Cambiado de genres a genre
+      genre,
       rate,
       poster,
     }
 
     try {
-      // Enviar los datos al backend
       const response = await createMovie(movieData)
       console.log("Película guardada en la base de datos:", response)
       alert("Película guardada en la base de datos exitosamente.")
 
-      // Redireccionar al home para ver todas las películas
       window.location.href = "index.html"
     } catch (error) {
       console.error("Error al guardar la película:", error)

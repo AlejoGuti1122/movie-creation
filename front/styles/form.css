@@ -165,7 +165,6 @@ form label {
 }
 
 .button {
-  /* Fondo degradado moderno */
   background: linear-gradient(135deg, #a49c67 0%, #fad0c4 100%);
   color: #fff;
   border: none;
@@ -174,20 +173,17 @@ form label {
   cursor: pointer;
   font-size: 18px;
   margin-top: 23px;
-  
-  /* Sombra inicial y transición */
+
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover: aumenta el tamaño ligeramente y refuerza la sombra */
 .button:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .button2 {
-  /* Fondo degradado moderno */
   background: linear-gradient(135deg, #a49c67 0%, #a14a31 100%);
   color: #fff;
   border: none;
@@ -196,19 +192,15 @@ form label {
   cursor: pointer;
   font-size: 18px;
   margin-top: 22px;
-  
-  /* Sombra inicial y transición */
+
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover: aumenta el tamaño ligeramente y refuerza la sombra */
 .button2:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
-
-
 
 .error-msg {
   color: red;
