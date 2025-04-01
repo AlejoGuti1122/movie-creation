@@ -1,7 +1,10 @@
 const app = require("./src/server")
+const dbCon = require("./src/config/dbCon")
 
-const PORT = 3000
+dbCon().then((res) => {
+  const PORT = 3000
 
-app.listen(PORT, () => {
+  app.listen(PORT, () => {
     console.log(`Servidor corriendo en puerto ${PORT}`)
+  })
 })
